@@ -120,6 +120,9 @@ with tf.Graph().as_default():
                         text_x = bb[i][0]
                         text_y = bb[i][3] + 20
                         # print('result: ', best_class_indices[0])
+                        cropped = []
+                        scaled = []
+                        scaled_reshape = []
                         for H_i in HumanNames:
                             if HumanNames[best_class_indices[0]] == H_i:
                                 result_names = HumanNames[best_class_indices[0]]
